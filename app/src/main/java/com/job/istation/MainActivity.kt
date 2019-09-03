@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import com.job.istation.commoners.Tools
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -54,5 +55,34 @@ class MainActivity : AppCompatActivity() {
 
     fun toProfile(v: View){
         startActivity(ProfileActivity.newIntent(this))
+    }
+
+    fun toStuff(v:View){
+        startActivity(StuffActivity.newIntent(this))
+    }
+
+
+    fun toTrans(v:View){
+        Snackbar.make(
+            findViewById(android.R.id.content)!!,
+            "Hold up! No transactions generated yet",
+            Snackbar.LENGTH_SHORT
+        ).show()
+    }
+
+    fun toBills(v:View){
+        Snackbar.make(
+            findViewById(android.R.id.content)!!,
+            "Hold up! No Bills incurred yet",
+            Snackbar.LENGTH_SHORT
+        ).show()
+    }
+
+    fun toInvoices(v:View){
+        Snackbar.make(
+            findViewById(android.R.id.content)!!,
+            "Hold up! No Invoices available yet",
+            Snackbar.LENGTH_SHORT
+        ).show()
     }
 }
