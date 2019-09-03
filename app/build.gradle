@@ -37,4 +37,17 @@ dependencies {
 
     // Circular image
     implementation 'com.mikhaellopez:circularimageview:3.2.0'
+
+    implementation 'com.github.captain-miao:optroundcardview:1.0.0'
+    implementation 'com.leavjenn.smoothdaterangepicker:library:0.2.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // Iconics libs
+    implementation 'com.mikepenz:iconics-core:3.0.3@aar'
+    implementation 'com.mikepenz:iconics-views:3.0.3@aar'
+    implementation 'com.mikepenz:ionicons-typeface:2.0.1.4@aar'
+    implementation 'com.mikepenz:fontawesome-typeface:5.0.6.0@aar'
+    implementation 'com.mikepenz:actionitembadge:3.3.2@aar'
 }
