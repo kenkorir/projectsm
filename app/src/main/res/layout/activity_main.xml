@@ -62,6 +62,7 @@
                         android:layout_weight="1"
                         android:visibility="visible"
                         app:cardCornerRadius="2dp"
+                        android:onClick="toSaleActivity"
                         app:cardElevation="2dp">
 
                     <LinearLayout
@@ -134,6 +135,7 @@
                         android:layout_weight="1"
                         android:visibility="visible"
                         app:cardCornerRadius="2dp"
+                        android:onClick="toSaleActivity"
                         app:cardElevation="2dp">
 
                     <LinearLayout
@@ -216,6 +218,7 @@
                         android:layout_weight="1"
                         android:visibility="visible"
                         app:cardCornerRadius="2dp"
+                        android:onClick="toSaleActivity"
                         app:cardElevation="2dp">
 
                     <LinearLayout
