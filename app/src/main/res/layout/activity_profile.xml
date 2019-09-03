@@ -135,6 +135,7 @@
                     android:visibility="visible"
                     app:cardCornerRadius="2dp"
                     app:cardElevation="2dp"
+                    android:onClick="toStuff"
                     app:cardUseCompatPadding="true">
 
                 <LinearLayout
@@ -224,6 +225,7 @@
                     android:visibility="visible"
                     app:cardCornerRadius="2dp"
                     app:cardElevation="2dp"
+                    android:onClick="toreviews"
                     app:cardUseCompatPadding="true">
 
                 <LinearLayout

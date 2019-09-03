@@ -392,6 +392,7 @@
                             android:visibility="visible"
                             app:cardCornerRadius="1dp"
                             app:cardElevation="1dp"
+                            android:onClick="toTrans"
                             app:cardUseCompatPadding="true">
 
                         <LinearLayout
@@ -400,6 +401,7 @@
                                 android:background="?attr/selectableItemBackgroundBorderless"
                                 android:clickable="true"
                                 android:orientation="vertical"
+                                android:onClick="toTrans"
                                 android:padding="@dimen/spacing_large">
 
                             <RelativeLayout
@@ -447,6 +449,7 @@
                             android:visibility="visible"
                             app:cardCornerRadius="1dp"
                             app:cardElevation="1dp"
+                            android:onClick="toBills"
                             app:cardUseCompatPadding="true">
 
                         <LinearLayout
@@ -455,6 +458,7 @@
                                 android:background="?attr/selectableItemBackgroundBorderless"
                                 android:clickable="true"
                                 android:orientation="vertical"
+                                android:onClick="toBills"
                                 android:padding="@dimen/spacing_large">
 
                             <RelativeLayout
@@ -510,6 +514,7 @@
                             android:visibility="visible"
                             app:cardCornerRadius="1dp"
                             app:cardElevation="1dp"
+                            android:onClick="toInvoices"
                             app:cardUseCompatPadding="true">
 
                         <LinearLayout
@@ -518,6 +523,7 @@
                                 android:background="?attr/selectableItemBackgroundBorderless"
                                 android:clickable="true"
                                 android:orientation="vertical"
+                                android:onClick="toInvoices"
                                 android:padding="@dimen/spacing_large">
 
                             <RelativeLayout
@@ -566,6 +572,7 @@
                             android:visibility="visible"
                             app:cardCornerRadius="1dp"
                             app:cardElevation="1dp"
+                            android:onClick="toStuff"
                             app:cardUseCompatPadding="true">
 
                         <LinearLayout
@@ -573,6 +580,7 @@
                                 android:layout_height="wrap_content"
                                 android:background="?attr/selectableItemBackgroundBorderless"
                                 android:clickable="true"
+                                android:onClick="toStuff"
                                 android:orientation="vertical"
                                 android:padding="@dimen/spacing_large">
 

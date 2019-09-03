@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import com.job.istation.commoners.Tools
 
 class ProfileActivity : AppCompatActivity() {
@@ -22,5 +23,17 @@ class ProfileActivity : AppCompatActivity() {
 
     fun toSaleActivity(v: View){
         startActivity(SalesActivity.newIntent(this))
+    }
+
+    fun toStuff(v:View){
+        startActivity(StuffActivity.newIntent(this))
+    }
+
+    fun toreviews(v:View){
+        Snackbar.make(
+            findViewById(android.R.id.content)!!,
+            "Hold up! No reviews available yet",
+            Snackbar.LENGTH_SHORT
+        ).show()
     }
 }
