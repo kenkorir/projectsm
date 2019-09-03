@@ -6,6 +6,7 @@ import android.content.*;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -17,12 +18,18 @@ import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.annotation.ColorInt;
 import androidx.annotation.ColorRes;
+import androidx.annotation.DrawableRes;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 import androidx.core.widget.NestedScrollView;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.job.istation.R;
 
 import java.net.URI;
@@ -321,6 +328,20 @@ public class Tools {
         } catch (Exception e) {
             e.printStackTrace();
             return uri;
+        }
+    }
+
+    public static void displayImageRound(final Context ctx, final ImageView img, @DrawableRes int drawable) {
+        try {
+            Glide.with(ctx).load(drawable).asBitmap().centerCrop().into(new BitmapImageViewTarget(img) {
+                @Override
+                protected void setResource(Bitmap resource) {
+                    RoundedBitmapDrawable circularBitmapDrawable = RoundedBitmapDrawableFactory.create(ctx.getResources(), resource);
+                    circularBitmapDrawable.setCircular(true);
+                    img.setImageDrawable(circularBitmapDrawable);
+                }
+            });
+        } catch (Exception e) {
         }
     }
 }
