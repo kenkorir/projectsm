@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     private fun initToolbar() {
 
         setSupportActionBar(toolbar)
-        Tools.setSystemBarColor(this, R.color.grey_5)
+        Tools.setSystemBarColor(this, R.color.purple_A700)
         Tools.setSystemBarLight(this)
     }
 
@@ -44,5 +45,9 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, item.title, Toast.LENGTH_SHORT).show()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    fun toProfile(v: View){
+        startActivity(ProfileActivity.newIntent(this))
     }
 }

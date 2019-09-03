@@ -13,7 +13,7 @@
     <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white">
+            android:background="@color/purple_A700">
 
         <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -23,7 +23,8 @@
                 app:contentInsetStartWithNavigation="0dp"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:theme="@style/Toolbar.Light"
-                app:title="IStation"/>
+                app:title="IStation"
+                app:titleTextColor="@android:color/white"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -77,7 +78,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_centerInParent="true"
-                                    android:tint="@color/orange_400"
+                                    android:tint="@color/purple_A700"
                                     app:srcCompat="@drawable/shape_circle"/>
 
                             <ImageView
@@ -288,6 +289,7 @@
                         android:layout_weight="1"
                         android:visibility="visible"
                         app:cardCornerRadius="2dp"
+                        android:onClick="toProfile"
                         app:cardElevation="2dp">
 
                     <LinearLayout
@@ -599,7 +601,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="@dimen/spacing_medium"
                                     android:layout_marginTop="50dp"
-                                    android:text="Support"
+                                    android:text="Stuff"
                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
                                     android:textColor="@color/grey_80"
                                     app:fontFamily="sans-serif-medium" />
