@@ -8,10 +8,15 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.job.istation.commoners.Tools
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
+
+    fun toSaleActivity(v: View){
+        startActivity(SalesActivity.newIntent(this))
+    }
 
     companion object {
         fun newIntent(context: Context): Intent =
