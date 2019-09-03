@@ -1,4 +1,4 @@
-package com.job.istation;
+package com.job.istation.commoners;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -23,6 +23,7 @@ import androidx.annotation.ColorRes;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.core.widget.NestedScrollView;
+import com.job.istation.R;
 
 import java.net.URI;
 import java.text.SimpleDateFormat;
