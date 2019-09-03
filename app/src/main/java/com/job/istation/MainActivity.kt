@@ -85,4 +85,8 @@ class MainActivity : AppCompatActivity() {
             Snackbar.LENGTH_SHORT
         ).show()
     }
+
+    fun toData(v:View){
+        startActivity(EnterDataActivity.newIntent(this))
+    }
 }
