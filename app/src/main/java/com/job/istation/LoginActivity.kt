@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
+import com.job.istation.commoners.Tools
 
 class LoginActivity : AppCompatActivity() {
 
