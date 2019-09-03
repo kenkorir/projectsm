@@ -1,11 +1,18 @@
 package com.job.istation
 
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
 class RegisterActivity : AppCompatActivity() {
+
+    companion object {
+        fun newIntent(context: Context): Intent =
+            Intent(context, RegisterActivity::class.java)
+    }
 
     private var parent_view: View? = null
 
@@ -16,6 +23,9 @@ class RegisterActivity : AppCompatActivity() {
 
         Tools.setSystemBarColor(this, android.R.color.white)
         Tools.setSystemBarLight(this)
+    }
 
+    fun toMainActivity(v:View){
+        startActivity(MainActivity.newIntent(this))
     }
 }

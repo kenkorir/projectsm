@@ -1,12 +1,19 @@
 package com.job.istation
 
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 
 class LoginActivity : AppCompatActivity() {
+
+    companion object {
+        fun newIntent(context: Context): Intent =
+            Intent(context, LoginActivity::class.java)
+    }
 
     private var parent_view: View? = null
 
@@ -21,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
         (findViewById(R.id.forgot_password) as View).setOnClickListener {
             Snackbar.make(
                 parent_view!!,
-                "Forgot Password",
+                "Sorry mate! create a new account.",
                 Snackbar.LENGTH_SHORT
             ).show()
         }
@@ -32,5 +39,13 @@ class LoginActivity : AppCompatActivity() {
                 Snackbar.LENGTH_SHORT
             ).show()
         }
+    }
+
+    fun toRegisterActivity(v:View){
+        startActivity(RegisterActivity.newIntent(this))
+    }
+
+    fun toMainActivity(v:View){
+        startActivity(MainActivity.newIntent(this))
     }
 }
