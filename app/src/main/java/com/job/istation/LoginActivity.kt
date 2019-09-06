@@ -34,11 +34,8 @@ class LoginActivity : AppCompatActivity() {
             ).show()
         }
         (findViewById(R.id.sign_up) as View).setOnClickListener {
-            Snackbar.make(
-                parent_view!!,
-                "Sign Up",
-                Snackbar.LENGTH_SHORT
-            ).show()
+
+            startActivity(RegisterActivity.newIntent(this@LoginActivity))
         }
     }
 

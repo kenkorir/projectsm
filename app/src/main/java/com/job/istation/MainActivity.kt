@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.job.istation.commoners.Tools
@@ -48,7 +47,8 @@ class MainActivity : AppCompatActivity() {
         if (item.getItemId() === android.R.id.home) {
             finish()
         } else {
-            Toast.makeText(applicationContext, item.title, Toast.LENGTH_SHORT).show()
+           // Toast.makeText(applicationContext, item.title, Toast.LENGTH_SHORT).show()
+            startActivity(LoginActivity.newIntent(this))
         }
         return super.onOptionsItemSelected(item)
     }

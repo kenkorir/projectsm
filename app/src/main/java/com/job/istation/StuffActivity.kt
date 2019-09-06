@@ -23,6 +23,7 @@ class StuffActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stuff)
         parent_view = findViewById<View>(android.R.id.content)
+        Tools.setSystemBarColor(this, R.color.purple_A700)
 
         initToolbar()
         initComponent()
