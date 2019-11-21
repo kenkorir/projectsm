@@ -3,18 +3,20 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.1"
+    buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.job.istation"
+        applicationId "com.job.Station"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -53,4 +55,11 @@ dependencies {
     implementation 'com.mikepenz:ionicons-typeface:2.0.1.4@aar'
     implementation 'com.mikepenz:fontawesome-typeface:5.0.6.0@aar'
     implementation 'com.mikepenz:actionitembadge:3.3.2@aar'
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //firebase dependencies
+    implementation 'com.google.firebase:firebase-auth:19.1.0'
+    implementation 'com.google.firebase:firebase-firestore:21.3.0'
+
 }

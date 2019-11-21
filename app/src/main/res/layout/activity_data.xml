@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              xmlns:tools="http://schemas.android.com/tools"
-              tools:context=".EnterDataActivity"
-              android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EnterDataActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -16,11 +16,11 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorAccent"
-            app:titleTextColor="@color/white"
-            app:title="New Entry"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:contentInsetStartWithNavigation="0dp"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="New Entry"
+            app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -45,9 +45,10 @@
                 android:textColorHint="@color/grey_40">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fuelType"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Fuel Type" />
+                    android:hint="@string/fuel_type" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -61,6 +62,7 @@
                 android:textColorHint="@color/grey_40">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Amount Units" />
@@ -77,17 +79,16 @@
                 android:textColorHint="@color/grey_40">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/staff"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Stuff" />
+                    android:hint="@string/staff" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/spacing_middle" />
-
-
 
             <View
                 android:layout_width="match_parent"
@@ -99,9 +100,10 @@
                 android:textColorHint="@color/grey_40">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/price"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Price"
+                    android:hint="@string/price"
                     android:inputType="phone" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -113,7 +115,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="* Required field"
+                android:text="@string/required_field"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
         </LinearLayout>
